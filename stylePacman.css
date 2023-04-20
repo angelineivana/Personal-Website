@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Abril Fatface', cursive;
+}
+
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+:root {
+    --firstColor: #F5E5DD;
+    --secondColor: #15354a;
+    --thirdColor: #9a8759;
+    --fourthColor: #a2d1ea;
+    --fifthColor: #c98768;
+    --sixthColor: white;
+}
+
+.portoPacman {
+    margin-top: 70px;
+    padding: 0 150px;
+}
+
+.switch {
+    --firstColor: #15354a;
+    --secondColor: #F5E5DD;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: var(--firstColor);
+    transition: 3s ease;
+}
+
+.header {
+    position: fixed;
+    background: var(--firstColor);
+    transition: 3s ease;
+    z-index: 9999;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 150px;
+    align-items: center;
+    /* !! */
+    z-index: 222;
+}
+
+.logo {
+    font-size: 30px;
+    color: var(--secondColor);
+    font-weight: 500;
+    text-decoration: none;
+    font-family: 'Great Vibes', cursive;
+}
+
+.logo b {
+    color: var(--fifthColor);
+    font-family: 'Great Vibes', cursive;
+}
+
+.logo a {
+    font-size: small;
+    text-decoration: none;
+    font-family: 'Great Vibes', cursive;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    flex: 1;
+    margin-right: 100px;
+}
+
+ul li {
+    margin: 0 20px;
+}
+
+ul li a {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 1;
+    color: var(--secondColor);
+    transition: 0.3s ease;
+}
+
+ul li a:hover {
+    color: var(--fifthColor);
+}
+
+#menuPorto{
+    color: var(--fifthColor);
+} 
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: var(--secondColor);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--firstColor);
+    transition: 3s ease;
+    z-index: 5;
+}
+
+.footer a,
+.footer p {
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--firstColor);
+}
+
+.footer a:hover {
+    color: var(--fourthColor);
+}
+
+.footer .row {
+    display: flex;
+    margin: 10px 40px 0px 40px;
+}
+
+.location,
+.portofolio,
+.contact {
+    color: var(--fifthColor);
+}
+
+.portofolio,
+.contact {
+    margin-left: 50px;
+}
+
+.portofolio a {
+    display: block;
+}
+
+.socialMedia {
+    margin-left: 40px;
+}
+
+.socialMedia a {
+    color: var(--thirdColor);
+    margin-right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+.socialMedia a:hover {
+    color: var(--fourthColor);
+    font-size: 1.7em;
+}
+
+.screenMode {
+    position: relative;
+}
+
+.screenMode .fa {
+    position: absolute;
+    color: var(--secondColor);
+    font-size: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.fa-sun {
+    display: none;
+}
+
+.switch .fa-sun {
+    display: block;
+}
+
+.switch .fa-moon {
+    display: block;
+    color: rgba(128, 128, 128, 0);
+}
+
+#top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--fifthColor);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#top a {
+    text-decoration: none;
+    color: white;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.carousel {
+    position: relative;
+    top: 10px;
+    left: 15%;
+    width: 70%;
+    height: 270px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border-style: groove;
+    border-width: 10px;
+    border-color: var(--fifthColor);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.carousel-images {
+    left: 0;
+    position: absolute;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    transition: 1s ease;
+}
+
+.carousel-images img {
+    object-fit: cover;
+}
+
+.carousel-navigation {
+    position: absolute;
+    bottom: 10px;
+}
+
+.carousel-navigation button {
+    background-color: var(--fifthColor);
+    font-weight: bold;
+    border: none;
+    border-radius: 200px;
+    font-size: 30px;
+    color: var(--firstColor);
+    padding: 0 12px;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.carousel-navigation button:hover {
+    transform: translateY(3px) scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: var(--fourthColor);
+}
+
+.firstCol {
+    max-width: 50%;
+}
+
+.desc{
+    max-width: 60%;
+    height: fit-content;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--thirdColor);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+} 
+
+.desc p{
+    margin-top: 10px;
+    color: var(--firstColor);
+}
+
+.title {
+    font-size: 25px;
+    color: var(--thirdColor);
+    margin-top: 20px;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+.textPacman h4{
+    color: var(--secondColor);
+}
+
+.github .fab{
+    text-decoration: none;
+    color: var(--secondColor);
+    font-size: 1.5em;
+}
+
+.github .githubName{
+    color: var(--secondColor);
+    margin-left: 5px;
+    font-weight: 800;
+}
+
+.timeline {
+    position: relative;
+    transition: 1s ease;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    transition: 0.5s ease;
+}
+
+.timeline-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--secondColor);
+    margin-right: 10px;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    color: var(--fifthColor);
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 55px;
+    left: 10px;
+    width: 3px;
+    background-color: var(--secondColor);
+    margin-left: -1px;
+}
+
+.timeline-item:hover {
+    transform: translateX(5px) scale(1.1);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15), 2px 1px 2px rgba(0, 0, 0, 0.076);
+}
+
+.period h4, .desc h4{
+    color: var(--secondColor);
+    font-size: 25px;
+}
+
+.period{
+    margin-top: 20px;
+}
+
+.header .menuSmall {
+    display: none;
+}
+
+@media only screen and (max-width: 1050px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        display: block;
+    }
+
+    .header .menuSmall {
+        display: flex;
+    }
+
+    .screenMode {
+        position: absolute;
+        top: 32px;
+        right: 25px;
+    }
+
+    .screenMode .fa {
+        font-size: 25px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menuSmall i {
+        cursor: pointer;
+        color: var(--secondColor);
+        font-size: 25px;
+        position: absolute;
+        top: 20px;
+        right: 50px;
+    }
+
+    .menuSmall ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menuSmall ul li {
+        display: block;
+        padding: 10px;
+    }
+
+    .menuSmall ul li a {
+        display: block;
+        color: #333;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .menuSmall.active ul {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--firstColor);
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .desc {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .textPacman {
+        width: 100%;
+        display: inline;
+    }
+
+    .portoPacman {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        padding: 0 50px;
+    }
+
+    .desc {
+        max-width: 100%;
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .row p {
+        font-size: 15px;
+    }
+
+    .textFooter a, .textFooter p {
+        font-size: 10px;;
+    }
+}

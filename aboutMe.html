@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="styleAbout.css">
+    <title>About Me</title>
+</head>
+
+<body>
+    <button id="top">
+        <a class="fa-solid fa-arrow-up" href="#"></a>
+    </button>
+    <div class="container">
+        <section class="header">
+            <nav>
+                <a href="https://instagram.com/angelineivanaa" class="logo"><b>A</b>ngeline <b>I</b>vana</a>
+                <ul>
+                    <li><a id="menuHome" href="home.html">Home</a></li>
+                    <li><a id="menuAbout" href="aboutMe.html">About Me</a></li>
+                    <li><a id="menuPorto" href="portofolio.html">Portofolio</a></li>
+                    <li><a id="menuContact" href="contact.php">Contact Me</a></li>
+                </ul>
+                <div class="menuSmall">
+                    <i class="fa fa-bars"></i>
+                    <ul class="menu">
+                        <li><a id="menuHome" href="home.html">Home</a></li>
+                        <li><a id="menuAbout" href="aboutMe.html">About Me</a></li>
+                        <li><a id="menuPorto" href="portofolio.html">Portofolio</a></li>
+                        <li><a id="menuContact" href="contact.php">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="screenMode">
+                    <i class="fa fa-sun"></i>
+                    <i class="fa fa-moon"></i>
+                </div>
+            </nav>
+        </section>
+        <section class="aboutMe">
+            <div class="col textChart">
+                <div class="row textAbout">
+                    <h2>Hi, I'm <span>Angeline Ivana</span></h2>
+                    <h3>Information System student</h3>
+                    <p>I am an aspiring 2nd-year student who appreciates making connections among ideas from many
+                        fields, individuals from various teams, and current issues. I'm technically proficient and have
+                        a background in data analysis and programming. My passions are using specialized data to solve
+                        business problems and discussing concepts with my team members.
+                        I'm eager to pursue new opportunities, especially those that will allow me to enhance my soft
+                        skills in programming and data analysis. In order to get additional connections and experience,
+                        I'm also interested in participating in more events and programs.
+                    </p>
+                </div>
+                <div class="row chart">
+                    <div class="col language">
+                        <h2>Languages</h2>
+                        <li>
+                            <h4>English</h4>
+                            <span class="bar"><span class="english"></span></span>
+                        </li>
+                        <li>
+                            <h4>Indonesian</h4>
+                            <span class="bar"><span class="indonesian"></span></span>
+                        </li>
+                    </div>
+                    <div class="col skill">
+                        <h2>Skills</h2>
+                        <li>
+                            <h4>HTML</h4>
+                            <span class="bar"><span class="html"></span></span>
+                        </li>
+                        <li>
+                            <h4>CSS</h4>
+                            <span class="bar"><span class="css"></span></span>
+                        </li>
+                        <li>
+                            <h4>Python</h4>
+                            <span class="bar"><span class="python"></span></span>
+                        </li>
+                        <li>
+                            <h4>C#</h4>
+                            <span class="bar"><span class="c"></span></span>
+                        </li>
+                        <li>
+                            <h4>JavaScript</h4>
+                            <span class="bar"><span class="javascript"></span></span>
+                        </li>
+                        <li>
+                            <h4>T-SQL</h4>
+                            <span class="bar"><span class="tsql"></span></span>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="col imgAbout">
+                <div class="imgbox">
+                    <img src="merah.png">
+                </div>
+                <div class="pattern"></div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="row textFooter">
+                <div class="col location">
+                    <h4>Location</h4>
+                    <a
+                        href="https://www.google.com/maps/place/Surabaya,+Surabaya+City,+East+Java/data=!4m2!3m1!1s0x2dd7fbf8381ac47f:0x3027a76e352be40?sa=X&ved=2ahUKEwiu_-WSnJ3-AhU4-TgGHaubDxoQ8gF6BAgIEAI">Surabaya,
+                        Indonesia</a>
+                </div>
+                <div class="col portofolio">
+                    <h4>Portofolio</h4>
+                    <a href="https://instagram.com/koreanclothing.ss">Korean Clothing.ss</a>
+                    <a
+                        href="https://medium.com/@angelineivana080703/sad-project-le-prosperes-inventory-management-website-catalogue-website-c5af4971e029">LE
+                        PROSPERE Inventory Management Website & Catalog Website</a>
+                    <a href="https://github.com/angelineivana/Tugas-AD-Counter-HP">POS System App & Database in C# &
+                        SQL-Based Database</a>
+                    <a href="https://powtaytowid.wixsite.com/powtaytow">Powtaytow</a>
+                    <a href="https://github.com/StevenO29/PacMan">Pacman Game in C#</a>
+                </div>
+                <div class="col contact">
+                    <h4>Contact</h4>
+                    <p>Phone: +6289678957264
+                        <br>
+                        Email: angelineivana01@student.ciputra.ac.id
+                    </p>
+                </div>
+            </div>
+            <div class="row socialMedia">
+                <a class="fab fa-instagram" href="https://instagram.com/angelineivanaa"></a>
+                <a class="fab fa-github" href="https://github.com/angelineivana"></a>
+                <a class="fab fa-linkedin" href="https://www.linkedin.com/in/angeline-ivana-403357222/"></a>
+            </div>
+        </section>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            document.body.style.opacity = 1;
+        });
+
+        const menuBtn = document.querySelector('.menuSmall i');
+        const menu = document.querySelector('.menuSmall ul');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        const screenMode = document.querySelector('.screenMode');
+        screenMode.addEventListener('click', function () {
+            document.body.classList.toggle('switch');
+        })
+    </script>
+</body>
+
+</html>

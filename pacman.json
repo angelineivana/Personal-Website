@@ -1,0 +1,11 @@
+{
+    "projectName": "Pacman Game in C#",
+    "period": [
+        {
+            "startDate": "November 2021",
+            "endDate": "January 2022"
+        }
+    ],
+    "link": "https://github.com/StevenO29/PacMan",
+    "description": "The final project for the Application Programming subject required us to create Pacman using C#. Our goal was to code the game to include two main entities: Pacman and the ghosts, following the original rules. We began by researching the game rules and entities, including the logic behind the ghosts' movements, creating the game map, coding the entities' movements, and adding various features like sound, levels, and menus. The project lasted approximately three months, during which I was responsible for coding the ghosts' scatter function and implementing additional game features."
+}

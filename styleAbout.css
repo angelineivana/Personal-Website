@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Abril Fatface', cursive;
+}
+
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+:root {
+    --firstColor: #F5E5DD;
+    --secondColor: #15354a;
+    --thirdColor: #9a8759;
+    --fourthColor: #a2d1ea;
+    --fifthColor: #c98768;
+    --sixthColor: white;
+}
+
+.aboutMe {
+    margin-top: 70px;
+}
+
+.switch {
+    --firstColor: #15354a;
+    --secondColor: #F5E5DD;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: var(--firstColor);
+    transition: 3s ease;
+}
+
+.header {
+    position: fixed;
+    background: var(--firstColor);
+    transition: 3s ease;
+    z-index: 9999;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 150px;
+    align-items: center;
+    /* !! */
+    z-index: 222;
+}
+
+.logo {
+    font-size: 30px;
+    color: var(--secondColor);
+    font-weight: 500;
+    text-decoration: none;
+    font-family: 'Great Vibes', cursive;
+}
+
+.logo b {
+    color: var(--fifthColor);
+    font-family: 'Great Vibes', cursive;
+}
+
+.logo a {
+    font-size: small;
+    text-decoration: none;
+    font-family: 'Great Vibes', cursive;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    flex: 1;
+    margin-right: 100px;
+}
+
+ul li {
+    margin: 0 20px;
+}
+
+ul li a {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 1;
+    color: var(--secondColor);
+    transition: 0.3s ease;
+}
+
+ul li a:hover {
+    color: var(--fifthColor);
+}
+
+#menuAbout {
+    color: var(--fifthColor);
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: var(--secondColor);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--firstColor);
+    transition: 3s ease;
+    z-index: 5;
+}
+
+.footer a,
+p {
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--firstColor);
+}
+
+.footer a:hover {
+    color: var(--fourthColor);
+}
+
+.footer .row {
+    display: flex;
+    margin: 10px 40px 10px 40px;
+}
+
+.location,
+.portofolio,
+.contact {
+    color: var(--fifthColor);
+    margin-bottom: 10px;
+}
+
+.portofolio,
+.contact {
+    margin-left: 50px;
+}
+
+.portofolio a {
+    display: block;
+}
+
+.socialMedia {
+    margin-left: 40px;
+}
+
+.socialMedia a {
+    color: var(--thirdColor);
+    margin-right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+.socialMedia a:hover {
+    color: var(--fourthColor);
+    font-size: 1.7em;
+}
+
+.screenMode {
+    position: relative;
+}
+
+.screenMode .fa {
+    position: absolute;
+    color: var(--secondColor);
+    font-size: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.fa-sun {
+    display: none;
+}
+
+.switch .fa-sun {
+    display: block;
+}
+
+.switch .fa-moon {
+    display: block;
+    color: rgba(128, 128, 128, 0);
+}
+
+#top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--fifthColor);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#top a {
+    text-decoration: none;
+    color: white;
+}
+
+.aboutMe {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.textChart {
+    max-width: 60%;
+}
+
+.textAbout {
+    margin: 60px 0 0 50px;
+}
+
+.textAbout h2 {
+    font-size: 3em;
+    font-weight: 600;
+    color: var(--secondColor);
+    z-index: 1111;
+}
+
+.textAbout h2 span {
+    color: var(--fifthColor);
+    font-weight: 900;
+}
+
+.textAbout h3 {
+    font-size: 2em;
+    font-weight: 400;
+    color: var(--thirdColor);
+    margin: 10px 0;
+    font-family: 'Great Vibes', cursive;
+}
+
+.textAbout p {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--secondColor);
+    letter-spacing: 1px;
+}
+
+.imgAbout {
+    overflow: hidden;
+    flex-basis: 30%;
+}
+
+.imgbox {
+    position: absolute;
+    bottom: -1%;
+    transition: 2s ease;
+    right: 5%;
+    z-index: 4;
+}
+
+.imgbox .img {
+    height: 100%;
+}
+
+.imgAbout:hover .imgbox {
+    transform: translateX(-10%) scale(1.1);
+}
+
+.imgAbout .pattern {
+    position: absolute;
+    background: url("moonred.png");
+    height: 100%;
+    width: 40%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 60%;
+    right: 2%;
+    transition: 2s ease;
+    z-index: 3;
+}
+
+.imgAbout:hover .pattern {
+    transform: translate(-10px, -350px) scale(0.8);
+}
+
+.chart {
+    list-style: none;
+    color: var(--sixthColor);
+    padding: 20px;
+}
+
+.chart,
+.footer .row {
+    display: flex;
+    flex-direction: row;
+}
+
+.chart .col {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    /* margin: 0 30px 0 30px; */
+    padding: 10px;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.chart .skill {
+    background-color: var(--fifthColor);
+    margin-left: 30px;
+    width: 60%;
+}
+
+.chart .language {
+    background-color: var(--secondColor);
+    margin-left: 30px;
+    width: 40%;
+}
+
+.chart h2 {
+    font-family: 'Great Vibes', cursive;
+    color: var(--firstColor);
+    letter-spacing: 1px;
+    font-size: large;
+}
+
+.chart li {
+    margin: 0 0 5px 0;
+}
+
+.chart h4 {
+    font-weight: 200;
+    font-size: small;
+}
+
+.bar {
+    background: var(--firstColor);
+    display: block;
+    height: 20px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.bar:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.bar span {
+    height: 20px;
+    float: left;
+}
+
+.skill .bar span,
+.language .bar span {
+    background: var(--thirdColor);
+}
+
+.html {
+    width: 70%;
+    animation: html 3s;
+}
+
+.css {
+    width: 65%;
+    animation: css 3s;
+}
+
+.python {
+    width: 50%;
+    animation: python 3s;
+}
+
+.c {
+    width: 80%;
+    animation: c 3s;
+}
+
+.javascript {
+    width: 50%;
+    animation: javascript 3s;
+}
+
+.tsql {
+    width: 80%;
+    animation: tsql 3s;
+}
+
+.english {
+    width: 80%;
+    animation: english 3s;
+}
+
+.indonesian {
+    width: 100%;
+    animation: indonesian 3s;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 65%;
+    }
+}
+
+@keyframes python {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes c {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes javascript {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes tsql {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes english {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes indonesian {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.header .menuSmall {
+    display: none;
+}
+
+@media only screen and (max-width: 1050px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        display: block;
+    }
+
+    .header .menuSmall {
+        display: flex;
+    }
+
+    .screenMode {
+        position: absolute;
+        top: 32px;
+        right: 25px;
+    }
+
+    .screenMode .fa {
+        font-size: 25px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menuSmall i {
+        cursor: pointer;
+        color: var(--secondColor);
+        font-size: 25px;
+        position: absolute;
+        top: 20px;
+        right: 50px;
+    }
+
+    .menuSmall ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menuSmall ul li {
+        display: block;
+        padding: 10px;
+    }
+
+    .menuSmall ul li a {
+        display: block;
+        color: #333;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .menuSmall.active ul {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--firstColor);
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .textAbout {
+        width: 100%;
+        display: inline;
+    }
+
+    .imgAbout {
+        display: inline;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .aboutMe {
+        display: flex;
+        flex-direction: column;
+        margin-top: 120px;
+        margin-bottom: 80px;
+        padding: 0px 50px;
+    }
+
+    
+    /* .textChart {
+        flex: 1;
+    } */
+
+    .imgAbout {
+        display: flex;
+        flex: 1;
+    }
+
+    .imgbox {
+        position: absolute;
+        bottom: -90px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .row p {
+        font-size: 15px;
+    }
+
+    .textFooter a, .textFooter p {
+        font-size: 10px;;
+    }
+}

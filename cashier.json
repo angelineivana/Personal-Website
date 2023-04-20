@@ -1,0 +1,11 @@
+{
+    "projectName": "POS System App in C# & SQL",
+    "period": [
+        {
+            "startDate": "April 2022",
+            "endDate": "June 2022"
+        }
+    ],
+    "link": "https://github.com/angelineivana/Tugas-AD-Counter-HP",
+    "description": "We developed a POS system application utilizing C# for our project, featuring a total of 8 forms, namely Login, Forgot Password, Change Password, Menu, Cashier, Catalog, Invoice, and History. I assigned different tasks to my team members, and I personally handled the Login, Menu, and Cashier forms. Additionally, I designed the application interface and assisted other team members with creating their assigned forms."
+}

@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Abril Fatface', cursive;
+}
+
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+:root {
+    --firstColor: #F5E5DD;
+    --secondColor: #15354a;
+    --thirdColor: #9a8759;
+    --fourthColor: #a2d1ea;
+    --fifthColor: #c98768;
+    --sixthColor: white;
+}
+
+.home {
+    margin-top: 100px;
+}
+
+.switch {
+    --firstColor: #15354a;
+    --secondColor: #F5E5DD;
+}
+
+#top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--fifthColor);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#top a {
+    text-decoration: none;
+    color: white;
+}
+
+.switch .home h3,
+.switch .home h4,
+.switch .home p {
+    -webkit-text-stroke-color: var(--firstColor);
+    -webkit-text-stroke-width: 1px;
+    color: var(--secondColor);
+    transition: 3s ease;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: var(--firstColor);
+    transition: 3s ease;
+}
+
+.header {
+    position: fixed;
+    background: var(--firstColor);
+    transition: 3s ease;
+    z-index: 9999;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 150px;
+    align-items: center;
+    /* !! */
+    z-index: 222;
+}
+
+.logo {
+    font-size: 30px;
+    color: var(--secondColor);
+    font-weight: 500;
+    text-decoration: none;
+    font-family: 'Great Vibes', cursive;
+}
+
+.logo b {
+    color: var(--fifthColor);
+    font-family: 'Great Vibes', cursive;
+}
+
+.logo a {
+    font-size: small;
+    text-decoration: none;
+    font-family: 'Great Vibes', cursive;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    flex: 1;
+    margin-right: 100px;
+}
+
+ul li {
+    margin: 0 20px;
+}
+
+ul li a {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 1;
+    color: var(--secondColor);
+    transition: 0.3s ease;
+}
+
+ul li a:hover {
+    color: var(--fifthColor);
+}
+
+#menuHome {
+    color: var(--fifthColor);
+}
+
+.home {
+    position: relative;
+    background: var(--firstColor);
+    width: 100%;
+    height: calc(100vh - 116px);
+    padding: 100px 20px;
+    background-image: url('gate.png');
+    transition: 3s ease;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+}
+
+.home:hover {
+    transform: scale(1.08);
+}
+
+.home h3 {
+    font-size: 7vw;
+    font-weight: 600;
+    color: var(--secondColor);
+    z-index: 1111;
+    font-weight: lighter;
+    transition: 1s ease;
+}
+
+.home h3:hover {
+    text-shadow: 3px 3px 1px var(--sixthColor);
+}
+
+.home h3 b,
+.switch .home h3 b {
+    color: var(--fifthColor);
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 3px 3px 1px var(--sixthColor);
+    -webkit-text-stroke-width: 0;
+    transition: 1s ease;
+}
+
+.home h3 b:hover,
+.switch .home h3 b:hover {
+    text-shadow: 3px 3px 1px var(--secondColor);
+}
+
+.home h4 {
+    font-size: 27px;
+    font-weight: 300;
+    color: var(--secondColor);
+    margin-bottom: 100px;
+    transition: 1s ease;
+}
+
+.home p {
+    font-size: 20px;
+    font-weight: 1000;
+    margin: 40px 0 10px 0;
+    color: var(--secondColor);
+    transition: 1s ease;
+}
+
+.home h4:hover,
+.home p:hover {
+    letter-spacing: 1px;
+}
+
+.home button {
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    color: var(--firstColor);
+    background-color: var(--thirdColor);
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 15px 20px 0 rgba(128, 128, 128, 0.747);
+    transition: 0.3s ease;
+}
+
+.home button:hover {
+    color: var(--fifthColor);
+    background-color: var(--firstColor);
+    padding: 10px 30px;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: var(--secondColor);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--firstColor);
+    transition: 3s ease;
+}
+
+.footer a,
+.footer p {
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--firstColor);
+}
+
+.footer a:hover {
+    color: var(--fourthColor);
+}
+
+.row {
+    display: flex;
+    margin: 10px 40px 10px 40px;
+}
+
+.location,
+.portofolio,
+.contact {
+    color: var(--fifthColor);
+}
+
+.portofolio,
+.contact {
+    margin-left: 50px;
+}
+
+.portofolio a {
+    display: block;
+}
+
+.socialMedia {
+    margin-left: 40px;
+}
+
+.socialMedia a {
+    color: var(--thirdColor);
+    margin-right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+.socialMedia a:hover {
+    color: var(--fourthColor);
+    font-size: 1.7em;
+}
+
+.screenMode {
+    position: relative;
+}
+
+.screenMode .fa {
+    position: absolute;
+    color: var(--secondColor);
+    font-size: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.fa-sun {
+    display: none;
+}
+
+.switch .fa-sun {
+    display: block;
+}
+
+.switch .fa-moon {
+    display: block;
+    color: rgba(128, 128, 128, 0);
+}
+
+.header .menuSmall {
+    display: none;
+}
+
+@media only screen and (max-width: 1050px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        display: block;
+    }
+
+    .header .menuSmall {
+        display: flex;
+    }
+
+    .screenMode {
+        position: absolute;
+        top: 32px;
+        right: 25px;
+    }
+
+    .screenMode .fa {
+        font-size: 25px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menuSmall i {
+        cursor: pointer;
+        color: var(--secondColor);
+        font-size: 25px;
+        position: absolute;
+        top: 20px;
+        right: 50px;
+    }
+
+    .menuSmall ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menuSmall ul li {
+        display: block;
+        padding: 10px;
+    }
+
+    .menuSmall ul li a {
+        display: block;
+        color: #333;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .menuSmall.active ul {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--firstColor);
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    /*HOME*/
+    .home {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .home h4 {
+        font-size: 25px;
+    }
+
+    .home p {
+        font-size: 17px;
+    }
+
+    .home button{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .home h4 {
+        font-size: 20px;
+    }
+
+    .home p {
+        font-size: 15px;
+    }
+
+    .home button{
+        font-size: 13px;
+    }
+    
+    .row a, .row p {
+        font-size: 10px;
+    }
+}

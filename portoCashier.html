@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="styleCashier.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>POS System App in C# & SQL</title>
+</head>
+
+<body>
+    <button id="top">
+        <a class="fa-solid fa-arrow-up" href="#"></a>
+    </button>
+    <div class="container">
+        <div class="header">
+            <nav>
+                <a href="https://instagram.com/angelineivanaa" class="logo"><b>A</b>ngeline <b>I</b>vana</a>
+                <ul>
+                    <li><a id="menuHome" href="home.html">Home</a></li>
+                    <li><a id="menuAbout" href="aboutMe.html">About Me</a></li>
+                    <li><a id="menuPorto" href="portofolio.html">Portofolio</a></li>
+                    <li><a id="menuContact" href="contact.php">Contact Me</a></li>
+                </ul>
+                <div class="menuSmall">
+                    <i class="fa fa-bars"></i>
+                    <ul class="menu">
+                        <li><a id="menuHome" href="home.html">Home</a></li>
+                        <li><a id="menuAbout" href="aboutMe.html">About Me</a></li>
+                        <li><a id="menuPorto" href="portofolio.html">Portofolio</a></li>
+                        <li><a id="menuContact" href="contact.php">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="screenMode">
+                    <i class="fa fa-sun"></i>
+                    <i class="fa fa-moon"></i>
+                </div>
+            </nav>
+        </div>
+        <div class="portoCashier">
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="cashier img/cashier1.png" alt="Image 1">
+                    <img src="cashier img/cashier2.png" alt="Image 2">
+                    <img src="cashier img/cashier3.png" alt="Image 3">
+                    <img src="cashier img/cashier4.png" alt="Image 4">
+                    <img src="cashier img/cashier5.png" alt="Image 5">
+                    <img src="cashier img/cashier6.png" alt="Image 6">
+                </div>
+                <div class="carousel-navigation">
+                    <button class="prev-btn">&lt;</button>
+                    <button class="next-btn">&gt;</button>
+                </div>
+            </div>
+            <div class="row textCashier">
+                <div class="col firstCol">
+                    <div class="row title">
+                        <h1 id="title"></h1>
+                    </div>
+                    <div class="row github">
+                        <a class="fab fa-github" id="icon"></a>
+                        <a class="githubName" id="username">GitHub Repository</a>
+                    </div>
+                    <div class="row period">
+                        <h4>Period</h4>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-icon"></div>
+                                <div class="timeline-content">
+                                    <p id="startDate"></p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon"></div>
+                                <div class="timeline-content">
+                                    <p id="endDate"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col desc">
+                    <h4>Description</h4>
+                    <p id="description"></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="row textFooter">
+                <div class="col location">
+                    <h4>Location</h4>
+                    <a
+                        href="https://www.google.com/maps/place/Surabaya,+Surabaya+City,+East+Java/data=!4m2!3m1!1s0x2dd7fbf8381ac47f:0x3027a76e352be40?sa=X&ved=2ahUKEwiu_-WSnJ3-AhU4-TgGHaubDxoQ8gF6BAgIEAI">Surabaya,
+                        Indonesia</a>
+                </div>
+                <div class="col portofolio">
+                    <h4>Portofolio</h4>
+                    <a href="https://instagram.com/koreanclothing.ss">Korean Clothing.ss</a>
+                    <a
+                        href="https://medium.com/@angelineivana080703/sad-project-le-prosperes-inventory-management-website-catalogue-website-c5af4971e029">LE
+                        PROSPERE Inventory Management Website & Catalog Website</a>
+                    <a href="https://github.com/angelineivana/Tugas-AD-Counter-HP">POS System App & Database in C# &
+                        SQL-Based Database</a>
+                    <a href="https://powtaytowid.wixsite.com/powtaytow">Powtaytow</a>
+                    <a href="https://github.com/StevenO29/PacMan">Pacman Game in C#</a>
+                </div>
+                <div class="col contact">
+                    <h4>Contact</h4>
+                    <p>Phone: +6289678957264
+                        <br>
+                        Email: angelineivana01@student.ciputra.ac.id
+                    </p>
+                </div>
+            </div>
+            <div class="socialMedia">
+                <a class="fab fa-instagram" href="https://instagram.com/angelineivanaa"></a>
+                <a class="fab fa-github" href="https://github.com/angelineivana"></a>
+                <a class="fab fa-linkedin" href="https://www.linkedin.com/in/angeline-ivana-403357222/"></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            document.body.style.opacity = 1;
+        });
+
+        const menuBtn = document.querySelector('.menuSmall i');
+        const menu = document.querySelector('.menuSmall ul');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        const screenMode = document.querySelector('.screenMode');
+        screenMode.addEventListener("click", function () {
+            document.body.classList.toggle('switch');
+        })
+
+        const carouselImages = document.querySelector(".carousel-images");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+
+        let counter = 0;
+        const size = carouselImages.children[0].clientWidth;
+
+        nextBtn.addEventListener("click", () => {
+            if (counter < carouselImages.children.length - 2) {
+                counter++;
+                carouselImages.style.transform = `translateX(-${size * counter}px)`;
+            }
+        });
+
+        prevBtn.addEventListener("click", () => {
+            if (counter > 0) {
+                counter--;
+                carouselImages.style.transform = `translateX(-${size * counter}px)`;
+            }
+        });
+
+        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        function isInView(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        function animateTimelineItems() {
+            timelineItems.forEach(item => {
+                if (isInView(item)) {
+                    item.classList.add('animate');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateTimelineItems);
+
+        fetch('cashier.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('title').innerHTML = data.projectName;
+                document.getElementById('icon').href = data.link;
+                document.getElementById('username').href = data.link;
+                document.getElementById('startDate').innerHTML = data.period[0].startDate;
+                document.getElementById('endDate').innerHTML = data.period[0].endDate;
+                document.getElementById('description').innerHTML = data.description;
+            });
+    </script>
+</body>
+
+</html>

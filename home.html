@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="styleHome.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <button id="top">
+        <a class="fa-solid fa-arrow-up" href="#"></a>
+    </button>
+    <div class="container">
+        <section class="header">
+            <nav>
+                <a href="https://instagram.com/angelineivanaa" class="logo"><b>A</b>ngeline <b>I</b>vana</a>
+                <ul class="menu">
+                    <li><a id="menuHome" href="home.html">Home</a></li>
+                    <li><a id="menuAbout" href="aboutMe.html">About Me</a></li>
+                    <li><a id="menuPorto" href="portofolio.html">Portofolio</a></li>
+                    <li><a id="menuContact" href="contact.php">Contact Me</a></li>
+                </ul>
+                <div class="menuSmall">
+                    <i class="fa fa-bars"></i>
+                    <ul class="menu">
+                        <li><a id="menuHome" href="home.html">Home</a></li>
+                        <li><a id="menuAbout" href="aboutMe.html">About Me</a></li>
+                        <li><a id="menuPorto" href="portofolio.html">Portofolio</a></li>
+                        <li><a id="menuContact" href="contact.php">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="screenMode">
+                    <i class="fa fa-sun"></i>
+                    <i class="fa fa-moon"></i>
+                </div>
+            </nav>
+        </section>
+        <section class="home">
+            <h3>Welcome To <b>My Garden</b></h3>
+            <h4>The personal website of Angeline Ivana</h4>
+            <p>Take a walk at a garden full of my flowers!</p>
+            <button id="button">Open Gate</button>
+            <audio id="button-sound">
+                <source src="opening door.wav" type="audio/wav">
+            </audio>
+        </section>
+        <section class="footer">
+            <div class="row">
+                <div class="col location">
+                    <h4>Location</h4>
+                    <a
+                        href="https://www.google.com/maps/place/Surabaya,+Surabaya+City,+East+Java/data=!4m2!3m1!1s0x2dd7fbf8381ac47f:0x3027a76e352be40?sa=X&ved=2ahUKEwiu_-WSnJ3-AhU4-TgGHaubDxoQ8gF6BAgIEAI">Surabaya,
+                        Indonesia</a>
+                </div>
+                <div class="col portofolio">
+                    <h4>Portofolio</h4>
+                    <a href="https://instagram.com/koreanclothing.ss">Korean Clothing.ss</a>
+                    <a
+                        href="https://medium.com/@angelineivana080703/sad-project-le-prosperes-inventory-management-website-catalogue-website-c5af4971e029">LE
+                        PROSPERE Inventory Management Website & Catalog Website</a>
+                    <a href="https://github.com/angelineivana/Tugas-AD-Counter-HP">POS System App & Database in C# &
+                        SQL-Based Database</a>
+                    <a href="https://powtaytowid.wixsite.com/powtaytow">Powtaytow</a>
+                    <a href="https://github.com/StevenO29/PacMan">Pacman Game in C#</a>
+                </div>
+                <div class="col contact">
+                    <h4>Contact</h4>
+                    <p>Phone: +6289678957264
+                        <br>
+                        Email: angelineivana01@student.ciputra.ac.id
+                    </p>
+                </div>
+            </div>
+            <div class="socialMedia">
+                <a class="fab fa-instagram" href="https://instagram.com/angelineivanaa"></a>
+                <a class="fab fa-github" href="https://github.com/angelineivana"></a>
+                <a class="fab fa-linkedin" href="https://www.linkedin.com/in/angeline-ivana-403357222/"></a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.body.style.opacity = 1;
+        });
+
+        const menuBtn = document.querySelector('.menuSmall i');
+        const menu = document.querySelector('.menuSmall ul');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        const screenMode = document.querySelector('.screenMode');
+        screenMode.addEventListener('click', function () {
+            document.body.classList.toggle('switch');
+        })
+
+        const button = document.getElementById("button");
+        button.addEventListener("click", playSound);
+        function playSound() {
+            const sound = document.getElementById("button-sound");
+            sound.play();
+            setTimeout(function () {
+                window.location.href = "portofolio.html";
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
